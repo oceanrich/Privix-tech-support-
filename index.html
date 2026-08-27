@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privix 在你的 iPhone 本機處理照片，並盡可能減少資料收集。">
+    <meta name="robots" content="index, follow">
+    <meta name="application-name" content="Privix">
+    <meta property="og:title" content="Privix 隱私政策">
+    <meta property="og:description" content="你的圖片，只留在你的 iPhone。了解 Privix 如何處理照片與資料。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="og.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privix 隱私政策">
+    <meta name="twitter:description" content="你的圖片，只留在你的 iPhone。">
+    <title>Privix 隱私政策</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+:root {
+  --bg: #f4f2ed;
+  --header: #fbfaf8;
+  --surface: #ffffff;
+  --surface-soft: #f1f2f5;
+  --ink: #2d2b32;
+  --muted: #6f6b73;
+  --line: #e3e0db;
+  --accent: #5964d8;
+  --accent-soft: #eef0ff;
+  --max-width: 980px;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #111214;
+  --header: #161719;
+  --surface: #1b1c1f;
+  --surface-soft: #24252a;
+  --ink: #f1efec;
+  --muted: #aaa6ae;
+  --line: #34353a;
+  --accent: #9098ff;
+  --accent-soft: #2a2d50;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang TC', 'PingFang SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+}
+button { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; }
+::selection { background: var(--accent-soft); color: var(--ink); }
+.site-shell { min-height: 100vh; }\n.noscript { max-width: 760px; margin: 48px auto; padding: 0 24px; color: var(--muted); text-align: center; }
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 220px;
+  padding: 34px 24px 30px;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 64%, transparent);
+  background: var(--header);
+}
+.brand {
+  color: var(--muted);
+  font-size: clamp(34px, 4vw, 44px);
+  font-weight: 380;
+  letter-spacing: .01em;
+  line-height: 1.1;
+  text-decoration: none;
+}
+.site-nav { display: flex; align-items: center; justify-content: center; gap: clamp(24px, 5vw, 62px); }
+.site-nav a { color: var(--muted); font-size: 14px; font-weight: 570; text-decoration: none; transition: color .2s ease; }
+.site-nav a:hover { color: var(--accent); }
+.header-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; }
+.language-switch { display: flex; gap: 3px; padding: 3px; border-radius: 11px; background: var(--surface-soft); }
+.language-switch button, .theme-switch { border: 0; cursor: pointer; }
+.language-switch button { min-width: 38px; height: 32px; padding: 0 8px; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12px; font-weight: 650; }
+.language-switch button.active { background: var(--muted); color: var(--surface); }
+.theme-switch { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); color: var(--ink); }
+.language-switch button:focus-visible, .theme-switch:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.page-wrap { width: min(calc(100% - 36px), calc(var(--max-width) + 72px)); margin: 0 auto; padding: 48px 0 88px; }
+.document-card {
+  padding: clamp(34px, 6vw, 68px);
+  border: 1px solid color-mix(in srgb, var(--line) 58%, transparent);
+  border-radius: 24px;
+  background: var(--surface);
+  box-shadow: 0 18px 50px rgb(38 34 29 / 8%);
+}
+.document-heading { margin-bottom: 44px; }
+.eyebrow { margin: 0 0 8px; color: var(--accent); font-size: 10px; font-weight: 760; letter-spacing: .16em; }
+.document-heading h1 { margin: 0; font-size: clamp(32px, 4vw, 43px); font-weight: 560; letter-spacing: -.03em; line-height: 1.2; }
+.title-rule { display: block; width: 62px; height: 2px; margin: 18px 0 26px; background: color-mix(in srgb, var(--ink) 68%, transparent); }
+.document-status { margin: 0 0 22px; color: var(--muted); font-size: 13px; }
+.policy-meta { max-width: 650px; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); }
+.policy-meta div { min-width: 0; }
+.policy-meta dt { margin-bottom: 3px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.policy-meta dd { margin: 0; font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+
+.hero { margin: 0 0 48px; padding: clamp(26px, 5vw, 44px); border-left: 4px solid var(--accent); border-radius: 14px; background: var(--accent-soft); }
+.hero-kicker { margin: 0 0 12px; color: var(--accent); font-size: 11px; font-weight: 730; letter-spacing: .08em; text-transform: uppercase; }
+.hero h2 { max-width: 720px; margin: 0; font-size: clamp(31px, 5.2vw, 53px); font-weight: 650; letter-spacing: -.05em; line-height: 1.12; }
+.lead { max-width: 760px; margin: 20px 0 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
+.local-flow { display: flex; align-items: center; gap: 12px; margin-top: 28px; padding-top: 22px; border-top: 1px solid color-mix(in srgb, var(--accent) 20%, var(--line)); }
+.local-flow span { color: var(--ink); font-size: 12px; font-weight: 630; }
+.local-flow i { color: var(--accent); font-style: normal; }
+
+.summary-block { margin: 0 0 48px; }
+.block-title { display: flex; align-items: center; gap: 11px; margin-bottom: 22px; }
+.block-title > span { width: 11px; height: 11px; border: 1.5px solid var(--muted); border-radius: 50%; }
+.block-title h2 { margin: 0; font-size: 22px; font-weight: 540; letter-spacing: -.02em; }
+.summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-soft); }
+.summary-grid article { min-height: 172px; padding: 26px; }
+.summary-grid article + article { border-left: 1px solid var(--line); }
+.summary-number { color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 700; }
+.summary-grid h3 { margin: 20px 0 6px; font-size: 17px; font-weight: 650; letter-spacing: -.015em; }
+.summary-grid p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+
+.table-of-contents { margin: 0 0 74px; padding: 26px 28px; border-radius: 14px; background: var(--surface-soft); }
+.table-of-contents > p { margin: 0 0 16px; color: var(--muted); font-size: 11px; font-weight: 720; letter-spacing: .08em; text-transform: uppercase; }
+.table-of-contents > div { display: grid; grid-template-columns: 1fr 1fr; column-gap: 34px; }
+.table-of-contents a { display: grid; grid-template-columns: 28px 1fr; gap: 6px; padding: 6px 0; color: var(--muted); font-size: 12px; line-height: 1.45; text-decoration: none; }
+.table-of-contents a span { color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 9px; padding-top: 2px; }
+.table-of-contents a:hover { color: var(--accent); }
+
+.policy-layout { min-width: 0; }
+.policy-article { min-width: 0; }
+.policy-section { padding: 0 0 58px; scroll-margin-top: 28px; }
+.policy-section + .policy-section { padding-top: 58px; border-top: 1px solid var(--line); }
+.section-heading { display: grid; grid-template-columns: 42px 1fr; align-items: baseline; margin-bottom: 24px; }
+.section-heading > span { color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 720; }
+.section-heading h2 { margin: 0; font-size: clamp(23px, 3vw, 30px); font-weight: 570; letter-spacing: -.03em; line-height: 1.25; }
+.policy-section > p { margin: 0 0 17px; color: var(--muted); font-size: 15px; line-height: 1.9; }
+.policy-section .callout { margin: 0 0 26px; padding: 22px 24px; border-left: 3px solid var(--accent); border-radius: 9px; background: color-mix(in srgb, var(--accent-soft) 78%, var(--surface)); color: var(--ink); font-size: 16px; font-weight: 610; line-height: 1.72; }
+.external-link { display: inline-flex; gap: 7px; margin-top: 3px; color: var(--accent); font-size: 13px; font-weight: 650; text-underline-offset: 4px; }
+.contact-card { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; margin-top: 10px; padding: 20px 22px; border-left: 3px solid var(--accent); border-radius: 10px; background: var(--surface-soft); }
+.contact-card a { color: var(--accent); font-size: 15px; font-weight: 680; text-underline-offset: 4px; }
+.contact-card span { color: var(--muted); font-size: 13px; }
+
+footer { display: grid; grid-template-columns: 1.5fr 1fr auto; align-items: end; gap: 34px; width: min(calc(100% - 36px), var(--max-width)); margin: 0 auto; padding: 0 0 64px; color: var(--muted); font-size: 12px; }
+footer p { margin: 0; }
+.footer-line { color: var(--ink); font-size: clamp(20px, 3vw, 28px); font-weight: 570; letter-spacing: -.035em; }
+footer a { color: var(--ink); font-weight: 620; text-decoration: none; }
+
+@media (max-width: 700px) {
+  .site-header { min-height: 192px; gap: 20px; padding: 28px 18px 24px; }
+  .brand { font-size: 34px; }
+  .site-nav { gap: 22px; }
+  .site-nav a { font-size: 12px; }
+  .page-wrap { padding: 28px 0 64px; }
+  .document-card { border-radius: 18px; }
+  .local-flow { align-items: flex-start; gap: 7px; }
+  .local-flow span { flex: 1; }
+  .summary-grid { grid-template-columns: 1fr; }
+  .summary-grid article { min-height: 0; padding: 22px; }
+  .summary-grid article + article { border-top: 1px solid var(--line); border-left: 0; }
+  .summary-grid h3 { margin-top: 14px; }
+  .table-of-contents { padding: 22px; }
+  .table-of-contents > div { grid-template-columns: 1fr; }
+  .policy-section { padding-bottom: 46px; }
+  .policy-section + .policy-section { padding-top: 46px; }
+  .section-heading { grid-template-columns: 34px 1fr; }
+  .policy-section .callout { padding: 19px; }
+  footer { grid-template-columns: 1fr; gap: 14px; padding-bottom: 44px; }
+}
+
+@media (max-width: 430px) {
+  .site-nav { width: 100%; justify-content: space-between; gap: 8px; }
+  .hero { padding: 24px 20px; }
+  .local-flow { flex-direction: column; }
+  .local-flow i { transform: rotate(90deg); margin-left: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  :root { --bg: #fff; --header: #fff; --surface: #fff; --surface-soft: #f5f5f5; --ink: #000; --muted: #333; --line: #ccc; }
+  .site-header, .table-of-contents, footer a { display: none !important; }
+  .page-wrap { width: 100%; padding: 0; }
+  .document-card { padding: 0; border: 0; box-shadow: none; }
+  .hero { margin-top: 34px; }
+  .policy-section { break-inside: avoid; padding-bottom: 34px; }
+  .policy-section + .policy-section { padding-top: 34px; }
+}
+
+    </style>
+  </head>
+  <body>
+    <main id="app" class="site-shell">
+
+  <header id="top" class="site-header">
+    <a class="brand" href="#top" aria-label="Privix">Privix</a>
+    <nav class="site-nav" aria-label="隱私政策">
+      <a href="#summary">隱私摘要</a><a href="#policy">隱私政策</a><a href="#contact">聯絡方式</a>
+    </nav>
+    <div class="header-actions">
+      <div class="language-switch" role="group" aria-label="切換語言">
+        <button type="button" data-language="zh" class="active" aria-pressed="true" lang="zh-Hant">繁</button><button type="button" data-language="zhHans" class="" aria-pressed="false" lang="zh-Hans">简</button><button type="button" data-language="ja" class="" aria-pressed="false" lang="ja">日</button><button type="button" data-language="ko" class="" aria-pressed="false" lang="ko">한</button><button type="button" data-language="en" class="" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <button type="button" class="theme-switch" aria-label="切換顯示模式" title="切換顯示模式"><span aria-hidden="true">◐</span></button>
+    </div>
+  </header>
+  <div class="page-wrap">
+    <article class="document-card">
+      <header class="document-heading">
+        <p class="eyebrow">PRIVACY, BY DESIGN</p><h1>隱私政策</h1><span class="title-rule" aria-hidden="true"></span>
+        <p class="document-status">本政策適用於 Privix iOS 1.0</p>
+        <dl class="policy-meta"><div><dt>生效日期</dt><dd>2026 年 8 月 27 日</dd></div></dl>
+      </header>
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="hero-kicker">核心承諾</p><h2 id="hero-title">你的圖片，只留在你的 iPhone。</h2><p class="lead">Privix 直接在你的裝置上編輯圖片。水印、馬賽克與壓縮不需要把照片上傳到 Privix 的伺服器。</p>
+        <div class="local-flow" aria-label="Privix 的本機處理流程"><span>選擇照片</span><i aria-hidden="true">→</i><span>在 iPhone 編輯</span><i aria-hidden="true">→</i><span>由你儲存或分享</span></div>
+      </section>
+      <section id="summary" class="summary-block" aria-label="隱私摘要">
+        <div class="block-title"><span></span><h2>隱私摘要</h2></div>
+        <div class="summary-grid"><article><span class="summary-number">01</span><h3>本機處理</h3><p>照片編輯與輸出在你的裝置上完成。</p></article><article><span class="summary-number">02</span><h3>不需帳號</h3><p>不需要姓名、Email、電話或登入資料。</p></article><article><span class="summary-number">03</span><h3>沒有追蹤</h3><p>沒有分析、廣告 SDK 或跨 App 追蹤。</p></article></div>
+      </section>
+      <nav class="table-of-contents" aria-label="本頁內容"><p>本頁內容</p><div><a href="#introduction"><span>01</span>適用範圍</a><a href="#photos"><span>02</span>照片與圖片處理</a><a href="#collection"><span>03</span>Privix 收集的資訊</a><a href="#device-storage"><span>04</span>儲存在你裝置上的資訊</a><a href="#permissions"><span>05</span>照片圖庫權限</a><a href="#purchases"><span>06</span>購買與 Apple StoreKit</a><a href="#analytics"><span>07</span>分析、廣告與追蹤</a><a href="#sharing"><span>08</span>分享與第三方服務</a><a href="#retention"><span>09</span>保留、刪除與你的選擇</a><a href="#children"><span>10</span>兒童隱私</a><a href="#security"><span>11</span>安全</a><a href="#website"><span>12</span>本隱私政策網站</a><a href="#changes"><span>13</span>政策變更</a><a href="#contact"><span>14</span>聯絡方式</a></div></nav>
+      <div id="policy" class="policy-layout"><article class="policy-article"><section id="introduction" class="policy-section"><div class="section-heading"><span>01</span><h2>適用範圍</h2></div><p>本隱私政策說明 Privix iOS App（以下稱「Privix」）與本隱私政策網站如何處理資訊。Privix 是一款隱私優先的本地圖片工具，提供水印、馬賽克與圖片壓縮功能。</p><p>Privix 的核心做法是減少資料暴露：不建立使用者帳號、不設置圖片處理伺服器，也不要求與功能無關的權限。</p></section><section id="photos" class="policy-section"><div class="section-heading"><span>02</span><h2>照片與圖片處理</h2></div><p class="callout">你選擇的照片在裝置上處理，不會為了編輯而上傳至 Privix 的伺服器。</p><p>你透過 Apple 提供的 PhotosPicker 主動選擇圖片。Privix 只接收你選取的項目，不會掃描或分析整個照片圖庫。</p><p>圖片載入、預覽、水印、馬賽克、壓縮、渲染與 JPEG 輸出使用 Apple 原生框架在 iPhone 上完成。Privix 不會把你的照片、圖片像素、水印文字、檔名、EXIF／GPS 中繼資料、臉部或圖片中的文字傳送到開發者控制的伺服器。</p><p>Privix 預設不覆蓋原始照片。完成編輯後會建立新的輸出檔案，由你決定是否儲存或分享。</p></section><section id="collection" class="policy-section"><div class="section-heading"><span>03</span><h2>Privix 收集的資訊</h2></div><p class="callout">目前版本沒有開發者後端、帳號、遙測、分析或第三方資料收集 SDK。</p><p>依據目前版本的實作，Privix 不會將個人資料傳送至 Privix 或開發者控制的伺服器，也不建立遠端照片或使用者資料庫。</p><p>Privix 不收集姓名、Email、電話號碼、精確位置、聯絡人、廣告識別碼或使用者設定檔。你輸入的水印文字只用於在裝置上完成圖片輸出。</p></section><section id="device-storage" class="policy-section"><div class="section-heading"><span>04</span><h2>儲存在你裝置上的資訊</h2></div><p>Privix 會使用 iOS 的 UserDefaults／AppStorage，在 App 的本地儲存空間保存少量功能狀態，包括語言偏好，以及免費圖片輸出的已使用次數。這些資料不包含照片、圖片內容、圖片中繼資料、姓名、Email、電話或廣告識別資訊。</p><p>處理圖片時，Privix 會在記憶體與 App 私有的暫存目錄建立選取圖片副本、預覽及輸出檔案。這些檔案只用於你要求的編輯、儲存或分享流程，不會用於分析、廣告、AI 訓練或雲端同步。暫存檔可能保留到被 App 或 iOS 清除，或直到 App 被移除。</p><p>你可以刪除 Privix 來移除其一般本地設定與 App 私有儲存內容；iOS 也可能依系統管理規則清理暫存檔。</p></section><section id="permissions" class="policy-section"><div class="section-heading"><span>05</span><h2>照片圖庫權限</h2></div><p>選擇圖片使用 Apple 的系統照片選擇器，以減少對完整照片圖庫權限的需求。當你主動點選「儲存到照片」時，Privix 才會要求「僅新增照片」權限，並把新的輸出圖片寫入照片圖庫。</p><p>你可以隨時前往 iOS「設定」中的 Privix 權限頁面撤回照片存取權。撤回後，Privix 將無法把新圖片儲存到照片圖庫，除非你再次授權；本機編輯與透過系統分享功能不一定受影響。</p></section><section id="purchases" class="policy-section"><div class="section-heading"><span>06</span><h2>購買與 Apple StoreKit</h2></div><p>Privix 提供一次性永久解鎖，並使用 Apple StoreKit 2 讀取商品資訊、完成購買、驗證權益及恢復購買。這些功能可能需要網路連線。</p><p>付款由 Apple 的 App Store 系統處理。Privix 不會要求或取得你的信用卡號、CVV、Apple ID 密碼或銀行帳戶資料。Privix 會在裝置上讀取 Apple 提供的購買權益狀態，以判斷功能是否已解鎖。</p><p>Apple 對 App Store 購買與交易資料的處理受 Apple 自己的隱私文件約束。</p><a class="external-link" href="https://www.apple.com/legal/privacy/data/zh-tw/app-store/" target="_blank" rel="noopener noreferrer">查看 Apple 的 App Store 與隱私說明 <span aria-hidden="true">↗</span></a></section><section id="analytics" class="policy-section"><div class="section-heading"><span>07</span><h2>分析、廣告與追蹤</h2></div><p>目前版本不使用分析、當機回報、廣告或追蹤 SDK，不顯示廣告，也不要求 App Tracking Transparency 權限。</p><p>Privix 不進行跨 App 或跨網站追蹤，不使用 IDFA，不會利用圖片或使用行為建立廣告資料，也不出售個人資料。你的圖片不會被 Privix 用於訓練 AI 模型。</p></section><section id="sharing" class="policy-section"><div class="section-heading"><span>08</span><h2>分享與第三方服務</h2></div><p>當你使用 iOS 分享選單把輸出圖片傳送到 AirDrop、訊息、Mail、Files、LINE、WhatsApp 或其他 App 時，你選擇的第三方服務會接收該圖片。分享是由你主動發起，Privix 不控制第三方如何處理收到的資訊。</p><p>你分享給第三方 App 或服務的資訊，將受該第三方自身的隱私政策與條款約束。Privix 目前未整合非 Apple 的第三方 SDK。</p></section><section id="retention" class="policy-section"><div class="section-heading"><span>09</span><h2>保留、刪除與你的選擇</h2></div><p>因為 Privix 沒有開發者控制的帳號或後端資料庫，所以沒有可由 Privix 伺服器保存或刪除的照片、帳號或遠端個人檔案。</p><p>App 的本地偏好與免費輸出次數保存在你的裝置上；圖片處理暫存檔留在 App 的私有儲存空間，由 App 或 iOS 管理。你可以刪除已匯出的照片、撤回照片權限，或移除 App 及其本地資料。</p><p>Apple 保存的購買與 App Store 紀錄由 Apple 管理。若你對 Privix 的資料處理有疑問，可使用本頁聯絡方式；若問題涉及 Apple 帳戶或交易紀錄，請直接聯絡 Apple。</p></section><section id="children" class="policy-section"><div class="section-heading"><span>10</span><h2>兒童隱私</h2></div><p>Privix 不是為兒童建立個人檔案、社交互動或定向廣告的服務，也不會明知而收集兒童的帳號或聯絡資訊。由於 Privix 沒有帳號系統，我們不要求使用者提供年齡。</p><p>若你認為兒童透過聯絡管道提供了個人資訊，請通知開發者，以便在可控制的範圍內處理。</p></section><section id="security" class="policy-section"><div class="section-heading"><span>11</span><h2>安全</h2></div><p>Privix 透過本機圖片處理、最小權限及減少外部依賴來降低資料暴露。不過，任何裝置、軟體或傳輸方式都無法保證百分之百安全。</p><p>請在分享或儲存前確認馬賽克、水印與壓縮結果符合你的需求。分享後，接收圖片的服務或收件者可能保存副本。</p></section><section id="website" class="policy-section"><div class="section-heading"><span>12</span><h2>本隱私政策網站</h2></div><p>本網站不使用分析、廣告、追蹤像素、登入系統或非必要 Cookie。</p><p>為了傳送網站內容、維護安全與防止濫用，網站的託管或內容傳遞服務提供者可能處理基本技術資訊，例如 IP 位址、請求時間、請求頁面與瀏覽器 User-Agent，並依其作業與安全政策保留有限期間。Privix 不會使用這些資訊建立廣告資料。</p></section><section id="changes" class="policy-section"><div class="section-heading"><span>13</span><h2>政策變更</h2></div><p>若 Privix 的功能或資料處理方式改變，我們可能更新本政策並調整頁面上的生效日期。重大改變會在合理情況下透過 App、網站或 App Store 資訊告知。</p><p>若未來加入分析、第三方 SDK、遠端服務或新的資料用途，本政策與 App Store Connect 的 App 隱私資訊會在相應版本發布前更新。</p></section><section id="contact" class="policy-section"><div class="section-heading"><span>14</span><h2>聯絡方式</h2></div><p>如果你對本政策、Privix 的隱私設計或你的資料選擇有疑問，請聯絡：</p><div class="contact-card"><a href="mailto:fxstudio73@gmail.com">fxstudio73@gmail.com</a><span>工作時間：週一至週五 9:00–18:00</span></div></section></article></div>
+    </article>
+  </div>
+  <footer><p class="footer-line">Collect less. Upload less. Ask for less.</p><p>Privix · 隱私優先的本地圖片工具</p><a href="#top">回到頂端 ↑</a></footer>
+    </main>
+    <noscript>
+      <p class="noscript">請啟用 JavaScript 以查看 Privix 的多語言隱私政策。</p>
+    </noscript>
+    <script>
+const languageOptions = [
+  { value: 'zh', label: '繁' },
+  { value: 'zhHans', label: '简' },
+  { value: 'ja', label: '日' },
+  { value: 'ko', label: '한' },
+  { value: 'en', label: 'EN' },
+];
+
+const uiCopy = {
+  zh: {
+    overview: '隱私摘要', contact: '聯絡方式', corePromise: '核心承諾',
+    flowLabel: 'Privix 的本機處理流程', choosePhoto: '選擇照片', editOnIphone: '在 iPhone 編輯',
+    saveOrShare: '由你儲存或分享', summaryLabel: '隱私摘要', summaryTitle: '隱私摘要', backToTop: '回到頂端 ↑',
+  },
+  zhHans: {
+    overview: '隐私摘要', contact: '联系方式', corePromise: '核心承诺',
+    flowLabel: 'Privix 的本地处理流程', choosePhoto: '选择照片', editOnIphone: '在 iPhone 编辑',
+    saveOrShare: '由你保存或分享', summaryLabel: '隐私摘要', summaryTitle: '隐私摘要', backToTop: '返回顶部 ↑',
+  },
+  ja: {
+    overview: '概要', contact: 'お問い合わせ', corePromise: '大切な約束',
+    flowLabel: 'Privix のデバイス内処理フロー', choosePhoto: '写真を選択', editOnIphone: 'iPhone で編集',
+    saveOrShare: '保存または共有', summaryLabel: 'プライバシー概要', summaryTitle: 'プライバシー概要', backToTop: 'ページ上部へ ↑',
+  },
+  ko: {
+    overview: '개요', contact: '문의', corePromise: '핵심 약속',
+    flowLabel: 'Privix의 기기 내 처리 과정', choosePhoto: '사진 선택', editOnIphone: 'iPhone에서 편집',
+    saveOrShare: '저장 또는 공유', summaryLabel: '개인정보 보호 요약', summaryTitle: '개인정보 보호 요약', backToTop: '맨 위로 ↑',
+  },
+  en: {
+    overview: 'Overview', contact: 'Contact', corePromise: 'Our core promise',
+    flowLabel: 'Privix local processing flow', choosePhoto: 'Choose photo', editOnIphone: 'Edit on iPhone',
+    saveOrShare: 'You save or share', summaryLabel: 'Privacy summary', summaryTitle: 'Privacy at a glance', backToTop: 'Back to top ↑',
+  },
+};
+
+const copy = {
+  zh: {
+    policy: '隱私政策',
+    languageLabel: '切換語言',
+    themeLabel: '切換顯示模式',
+    eyebrow: 'PRIVACY, BY DESIGN',
+    headline: '你的圖片，只留在你的 iPhone。',
+    lead: 'Privix 直接在你的裝置上編輯圖片。水印、馬賽克與壓縮不需要把照片上傳到 Privix 的伺服器。',
+    summary: [
+      ['本機處理', '照片編輯與輸出在你的裝置上完成。'],
+      ['不需帳號', '不需要姓名、Email、電話或登入資料。'],
+      ['沒有追蹤', '沒有分析、廣告 SDK 或跨 App 追蹤。'],
+    ],
+    reviewed: '本政策適用於 Privix iOS 1.0',
+    effective: '生效日期',
+    effectiveValue: '2026 年 8 月 27 日',
+    contents: '本頁內容',
+    sections: [
+      {
+        id: 'introduction', number: '01', title: '適用範圍',
+        body: [
+          '本隱私政策說明 Privix iOS App（以下稱「Privix」）與本隱私政策網站如何處理資訊。Privix 是一款隱私優先的本地圖片工具，提供水印、馬賽克與圖片壓縮功能。',
+          'Privix 的核心做法是減少資料暴露：不建立使用者帳號、不設置圖片處理伺服器，也不要求與功能無關的權限。',
+        ],
+      },
+      {
+        id: 'photos', number: '02', title: '照片與圖片處理',
+        callout: '你選擇的照片在裝置上處理，不會為了編輯而上傳至 Privix 的伺服器。',
+        body: [
+          '你透過 Apple 提供的 PhotosPicker 主動選擇圖片。Privix 只接收你選取的項目，不會掃描或分析整個照片圖庫。',
+          '圖片載入、預覽、水印、馬賽克、壓縮、渲染與 JPEG 輸出使用 Apple 原生框架在 iPhone 上完成。Privix 不會把你的照片、圖片像素、水印文字、檔名、EXIF／GPS 中繼資料、臉部或圖片中的文字傳送到開發者控制的伺服器。',
+          'Privix 預設不覆蓋原始照片。完成編輯後會建立新的輸出檔案，由你決定是否儲存或分享。',
+        ],
+      },
+      {
+        id: 'collection', number: '03', title: 'Privix 收集的資訊',
+        callout: '目前版本沒有開發者後端、帳號、遙測、分析或第三方資料收集 SDK。',
+        body: [
+          '依據目前版本的實作，Privix 不會將個人資料傳送至 Privix 或開發者控制的伺服器，也不建立遠端照片或使用者資料庫。',
+          'Privix 不收集姓名、Email、電話號碼、精確位置、聯絡人、廣告識別碼或使用者設定檔。你輸入的水印文字只用於在裝置上完成圖片輸出。',
+        ],
+      },
+      {
+        id: 'device-storage', number: '04', title: '儲存在你裝置上的資訊',
+        body: [
+          'Privix 會使用 iOS 的 UserDefaults／AppStorage，在 App 的本地儲存空間保存少量功能狀態，包括語言偏好，以及免費圖片輸出的已使用次數。這些資料不包含照片、圖片內容、圖片中繼資料、姓名、Email、電話或廣告識別資訊。',
+          '處理圖片時，Privix 會在記憶體與 App 私有的暫存目錄建立選取圖片副本、預覽及輸出檔案。這些檔案只用於你要求的編輯、儲存或分享流程，不會用於分析、廣告、AI 訓練或雲端同步。暫存檔可能保留到被 App 或 iOS 清除，或直到 App 被移除。',
+          '你可以刪除 Privix 來移除其一般本地設定與 App 私有儲存內容；iOS 也可能依系統管理規則清理暫存檔。',
+        ],
+      },
+      {
+        id: 'permissions', number: '05', title: '照片圖庫權限',
+        body: [
+          '選擇圖片使用 Apple 的系統照片選擇器，以減少對完整照片圖庫權限的需求。當你主動點選「儲存到照片」時，Privix 才會要求「僅新增照片」權限，並把新的輸出圖片寫入照片圖庫。',
+          '你可以隨時前往 iOS「設定」中的 Privix 權限頁面撤回照片存取權。撤回後，Privix 將無法把新圖片儲存到照片圖庫，除非你再次授權；本機編輯與透過系統分享功能不一定受影響。',
+        ],
+      },
+      {
+        id: 'purchases', number: '06', title: '購買與 Apple StoreKit',
+        body: [
+          'Privix 提供一次性永久解鎖，並使用 Apple StoreKit 2 讀取商品資訊、完成購買、驗證權益及恢復購買。這些功能可能需要網路連線。',
+          '付款由 Apple 的 App Store 系統處理。Privix 不會要求或取得你的信用卡號、CVV、Apple ID 密碼或銀行帳戶資料。Privix 會在裝置上讀取 Apple 提供的購買權益狀態，以判斷功能是否已解鎖。',
+          'Apple 對 App Store 購買與交易資料的處理受 Apple 自己的隱私文件約束。',
+        ],
+        link: ['查看 Apple 的 App Store 與隱私說明', 'https://www.apple.com/legal/privacy/data/zh-tw/app-store/'],
+      },
+      {
+        id: 'analytics', number: '07', title: '分析、廣告與追蹤',
+        body: [
+          '目前版本不使用分析、當機回報、廣告或追蹤 SDK，不顯示廣告，也不要求 App Tracking Transparency 權限。',
+          'Privix 不進行跨 App 或跨網站追蹤，不使用 IDFA，不會利用圖片或使用行為建立廣告資料，也不出售個人資料。你的圖片不會被 Privix 用於訓練 AI 模型。',
+        ],
+      },
+      {
+        id: 'sharing', number: '08', title: '分享與第三方服務',
+        body: [
+          '當你使用 iOS 分享選單把輸出圖片傳送到 AirDrop、訊息、Mail、Files、LINE、WhatsApp 或其他 App 時，你選擇的第三方服務會接收該圖片。分享是由你主動發起，Privix 不控制第三方如何處理收到的資訊。',
+          '你分享給第三方 App 或服務的資訊，將受該第三方自身的隱私政策與條款約束。Privix 目前未整合非 Apple 的第三方 SDK。',
+        ],
+      },
+      {
+        id: 'retention', number: '09', title: '保留、刪除與你的選擇',
+        body: [
+          '因為 Privix 沒有開發者控制的帳號或後端資料庫，所以沒有可由 Privix 伺服器保存或刪除的照片、帳號或遠端個人檔案。',
+          'App 的本地偏好與免費輸出次數保存在你的裝置上；圖片處理暫存檔留在 App 的私有儲存空間，由 App 或 iOS 管理。你可以刪除已匯出的照片、撤回照片權限，或移除 App 及其本地資料。',
+          'Apple 保存的購買與 App Store 紀錄由 Apple 管理。若你對 Privix 的資料處理有疑問，可使用本頁聯絡方式；若問題涉及 Apple 帳戶或交易紀錄，請直接聯絡 Apple。',
+        ],
+      },
+      {
+        id: 'children', number: '10', title: '兒童隱私',
+        body: [
+          'Privix 不是為兒童建立個人檔案、社交互動或定向廣告的服務，也不會明知而收集兒童的帳號或聯絡資訊。由於 Privix 沒有帳號系統，我們不要求使用者提供年齡。',
+          '若你認為兒童透過聯絡管道提供了個人資訊，請通知開發者，以便在可控制的範圍內處理。',
+        ],
+      },
+      {
+        id: 'security', number: '11', title: '安全',
+        body: [
+          'Privix 透過本機圖片處理、最小權限及減少外部依賴來降低資料暴露。不過，任何裝置、軟體或傳輸方式都無法保證百分之百安全。',
+          '請在分享或儲存前確認馬賽克、水印與壓縮結果符合你的需求。分享後，接收圖片的服務或收件者可能保存副本。',
+        ],
+      },
+      {
+        id: 'website', number: '12', title: '本隱私政策網站',
+        body: [
+          '本網站不使用分析、廣告、追蹤像素、登入系統或非必要 Cookie。',
+          '為了傳送網站內容、維護安全與防止濫用，網站的託管或內容傳遞服務提供者可能處理基本技術資訊，例如 IP 位址、請求時間、請求頁面與瀏覽器 User-Agent，並依其作業與安全政策保留有限期間。Privix 不會使用這些資訊建立廣告資料。',
+        ],
+      },
+      {
+        id: 'changes', number: '13', title: '政策變更',
+        body: [
+          '若 Privix 的功能或資料處理方式改變，我們可能更新本政策並調整頁面上的生效日期。重大改變會在合理情況下透過 App、網站或 App Store 資訊告知。',
+          '若未來加入分析、第三方 SDK、遠端服務或新的資料用途，本政策與 App Store Connect 的 App 隱私資訊會在相應版本發布前更新。',
+        ],
+      },
+      {
+        id: 'contact', number: '14', title: '聯絡方式',
+        body: ['如果你對本政策、Privix 的隱私設計或你的資料選擇有疑問，請聯絡：'],
+        contact: 'fxstudio73@gmail.com',
+        contactHours: '工作時間：週一至週五 9:00–18:00',
+      },
+    ],
+    footerLine: 'Collect less. Upload less. Ask for less.',
+    footerText: 'Privix · 隱私優先的本地圖片工具',
+  },
+  zhHans: {
+    policy: '隐私政策',
+    languageLabel: '切换语言',
+    themeLabel: '切换显示模式',
+    eyebrow: 'PRIVACY, BY DESIGN',
+    headline: '你的图片，只留在你的 iPhone。',
+    lead: 'Privix 直接在你的设备上编辑图片。水印、马赛克和压缩不需要将照片上传至 Privix 的服务器。',
+    summary: [
+      ['本地处理', '照片编辑和导出在你的设备上完成。'],
+      ['无需账号', '不需要姓名、Email、电话号码或登录信息。'],
+      ['没有跟踪', '没有分析、广告 SDK 或跨 App 跟踪。'],
+    ],
+    reviewed: '本政策适用于 Privix iOS 1.0',
+    effective: '生效日期',
+    effectiveValue: '2026 年 8 月 27 日',
+    contents: '本页内容',
+    sections: [
+      {
+        id: 'introduction', number: '01', title: '适用范围',
+        body: [
+          '本隐私政策说明 Privix iOS App（以下简称“Privix”）与本隐私政策网站如何处理信息。Privix 是一款隐私优先的本地图片工具，提供水印、马赛克和图片压缩功能。',
+          'Privix 的核心做法是减少数据暴露：不创建用户账号、不设置图片处理服务器，也不要求与功能无关的权限。',
+        ],
+      },
+      {
+        id: 'photos', number: '02', title: '照片与图片处理',
+        callout: '你选择的照片在设备上处理，不会为了编辑而上传至 Privix 的服务器。',
+        body: [
+          '你通过 Apple 提供的 PhotosPicker 主动选择图片。Privix 只接收你选择的项目，不会扫描或分析整个照片图库。',
+          '图片加载、预览、水印、马赛克、压缩、渲染和 JPEG 导出使用 Apple 原生框架在 iPhone 上完成。Privix 不会将你的照片、图片像素、水印文字、文件名、EXIF／GPS 元数据、人脸或图片中的文字发送到开发者控制的服务器。',
+          'Privix 默认不会覆盖原始照片。编辑完成后会创建新的导出文件，由你决定是否保存或分享。',
+        ],
+      },
+      {
+        id: 'collection', number: '03', title: 'Privix 收集的信息',
+        callout: '当前版本没有开发者后端、账号、遥测、分析或第三方数据收集 SDK。',
+        body: [
+          '根据当前版本的实际实现，Privix 不会将个人数据发送至 Privix 或开发者控制的服务器，也不会创建远程照片或用户数据库。',
+          'Privix 不收集姓名、Email、电话号码、精确位置、联系人、广告标识符或用户画像。你输入的水印文字仅用于在设备上完成图片导出。',
+        ],
+      },
+      {
+        id: 'device-storage', number: '04', title: '存储在你设备上的信息',
+        body: [
+          'Privix 使用 iOS 的 UserDefaults／AppStorage，在 App 的本地存储中保存少量功能状态，包括语言偏好和已使用的免费图片导出次数。这些数据不包含照片、图片内容、图片元数据、姓名、Email、电话号码或广告标识信息。',
+          '处理图片时，Privix 会在内存和 App 私有的临时目录中创建所选图片的副本、预览和导出文件。这些文件仅用于你要求的编辑、保存或分享流程，不会用于分析、广告、AI 训练或云同步。临时文件可能保留到 App 或 iOS 将其清除，或直到 App 被移除。',
+          '你可以删除 Privix，以移除其常规本地设置和 App 私有存储内容；iOS 也可能按照系统存储管理规则清理临时文件。',
+        ],
+      },
+      {
+        id: 'permissions', number: '05', title: '照片图库权限',
+        body: [
+          '选择图片使用 Apple 的系统照片选择器，从而减少对完整照片图库权限的需求。只有当你主动选择“保存到照片”时，Privix 才会请求“仅添加照片”权限，并将新的导出图片写入照片图库。',
+          '你可以随时前往 iOS“设置”中的 Privix 权限页面撤回照片访问权限。撤回后，除非再次授权，否则 Privix 无法将新图片保存到照片图库；本地编辑和系统分享功能不一定受影响。',
+        ],
+      },
+      {
+        id: 'purchases', number: '06', title: '购买与 Apple StoreKit',
+        body: [
+          'Privix 提供一次性永久解锁，并使用 Apple StoreKit 2 读取商品信息、完成购买、验证权益和恢复购买。这些功能可能需要网络连接。',
+          '付款由 Apple 的 App Store 系统处理。Privix 不会要求或获取你的银行卡号、CVV、Apple ID 密码或银行账户信息。Privix 会在设备上读取 Apple 提供的购买权益状态，以判断功能是否已解锁。',
+          'Apple 对 App Store 购买和交易数据的处理受 Apple 自身的隐私文件约束。',
+        ],
+        link: ['查看 Apple 的 App Store 与隐私说明', 'https://www.apple.com/legal/privacy/data/zh-cn/app-store/'],
+      },
+      {
+        id: 'analytics', number: '07', title: '分析、广告与跟踪',
+        body: [
+          '当前版本不使用分析、崩溃报告、广告或跟踪 SDK，不显示广告，也不请求 App Tracking Transparency 权限。',
+          'Privix 不进行跨 App 或跨网站跟踪，不使用 IDFA，不会利用图片或使用行为创建广告画像，也不出售个人数据。你的图片不会被 Privix 用于训练 AI 模型。',
+        ],
+      },
+      {
+        id: 'sharing', number: '08', title: '分享与第三方服务',
+        body: [
+          '当你使用 iOS 分享菜单将导出图片发送至 AirDrop、信息、Mail、Files、LINE、WhatsApp 或其他 App 时，你选择的第三方服务会收到该图片。分享由你主动发起，Privix 不控制第三方如何处理收到的信息。',
+          '你分享给第三方 App 或服务的信息，受该第三方自身的隐私政策与条款约束。Privix 当前未集成非 Apple 的第三方 SDK。',
+        ],
+      },
+      {
+        id: 'retention', number: '09', title: '保留、删除与你的选择',
+        body: [
+          '由于 Privix 没有开发者控制的账号或后端数据库，因此不存在由 Privix 服务器保存或删除的照片、账号或远程个人资料。',
+          'App 的本地偏好和免费导出次数保存在你的设备上；图片处理临时文件保存在 App 的私有存储中，由 App 或 iOS 管理。你可以删除已导出的照片、撤回照片权限，或移除 App 及其本地数据。',
+          'Apple 保存的购买与 App Store 记录由 Apple 管理。如果你对 Privix 的数据处理有疑问，可以使用本页联系方式；如果问题涉及 Apple 账号或交易记录，请直接联系 Apple。',
+        ],
+      },
+      {
+        id: 'children', number: '10', title: '儿童隐私',
+        body: [
+          'Privix 不是用于创建儿童个人资料、社交互动或定向广告的服务，也不会在明知的情况下收集儿童的账号或联系信息。由于 Privix 没有账号系统，我们不要求用户提供年龄。',
+          '如果你认为儿童通过联系渠道提供了个人信息，请通知开发者，以便在可控制的范围内处理。',
+        ],
+      },
+      {
+        id: 'security', number: '11', title: '安全',
+        body: [
+          'Privix 通过本地图片处理、最小权限和减少外部依赖来降低数据暴露。不过，任何设备、软件或传输方式都无法保证百分之百安全。',
+          '请在分享或保存前确认马赛克、水印和压缩结果符合你的需要。分享后，接收图片的服务或收件人可能保留副本。',
+        ],
+      },
+      {
+        id: 'website', number: '12', title: '本隐私政策网站',
+        body: [
+          '本网站不使用分析、广告、跟踪像素、登录系统或非必要 Cookie。',
+          '为了传送网站内容、维护安全和防止滥用，网站的托管或内容分发服务提供商可能处理基本技术信息，例如 IP 地址、请求时间、请求页面和浏览器 User-Agent，并根据其运营与安全政策保留有限时间。Privix 不会使用这些信息创建广告画像。',
+        ],
+      },
+      {
+        id: 'changes', number: '13', title: '政策变更',
+        body: [
+          '如果 Privix 的功能或数据处理方式发生变化，我们可能更新本政策并调整页面上的生效日期。如有重大变化，将在合理情况下通过 App、网站或 App Store 信息通知。',
+          '如果未来加入分析、第三方 SDK、远程服务或新的数据用途，本政策和 App Store Connect 中的 App 隐私信息会在相应版本发布前更新。',
+        ],
+      },
+      {
+        id: 'contact', number: '14', title: '联系方式',
+        body: ['如果你对本政策、Privix 的隐私设计或你的数据选择有疑问，请联系：'],
+        contact: 'fxstudio73@gmail.com',
+        contactHours: '工作时间：周一至周五 9:00–18:00',
+      },
+    ],
+    footerLine: 'Collect less. Upload less. Ask for less.',
+    footerText: 'Privix · 隐私优先的本地图片工具',
+  },
+  ja: {
+    policy: 'プライバシーポリシー',
+    languageLabel: '言語を切り替える',
+    themeLabel: '表示モードを切り替える',
+    eyebrow: 'PRIVACY, BY DESIGN',
+    headline: 'あなたの写真は、あなたの iPhone に。',
+    lead: 'Privix は画像をデバイス上で直接編集します。透かし、モザイク、圧縮のために写真を Privix のサーバーへアップロードする必要はありません。',
+    summary: [
+      ['デバイス内処理', '写真の編集と書き出しはデバイス上で行われます。'],
+      ['アカウント不要', '氏名、メールアドレス、電話番号、ログイン情報は不要です。'],
+      ['トラッキングなし', 'アナリティクス、広告 SDK、アプリ横断トラッキングはありません。'],
+    ],
+    reviewed: '本ポリシーは Privix iOS 1.0 に適用されます',
+    effective: '発効日',
+    effectiveValue: '2026年8月27日',
+    contents: 'このページの内容',
+    sections: [
+      {
+        id: 'introduction', number: '01', title: '適用範囲',
+        body: [
+          '本プライバシーポリシーは、Privix iOS アプリ（以下「Privix」）および本プライバシーポリシーサイトにおける情報の取扱いについて説明します。Privix は、透かし、モザイク、画像圧縮を提供するプライバシー重視のローカル画像ツールです。',
+          'Privix はデータの露出を最小限に抑えるよう設計されています。ユーザーアカウントや画像処理サーバーを設けず、機能に不要な権限を求めません。',
+        ],
+      },
+      {
+        id: 'photos', number: '02', title: '写真と画像処理',
+        callout: '選択した写真はデバイス上で処理され、編集のために Privix のサーバーへアップロードされることはありません。',
+        body: [
+          '画像は Apple が提供する PhotosPicker を使ってお客様自身が選択します。Privix が受け取るのは選択した項目のみで、写真ライブラリ全体をスキャンまたは解析することはありません。',
+          '画像の読み込み、プレビュー、透かし、モザイク、圧縮、レンダリング、JPEG 書き出しは、Apple のネイティブフレームワークを使用して iPhone 上で行われます。Privix は、写真、画像のピクセル、透かしの文字、ファイル名、EXIF／GPS メタデータ、顔、画像内の文字を、開発者が管理するサーバーへ送信しません。',
+          'Privix は初期設定では元の写真を上書きしません。編集後に新しい出力ファイルを作成し、保存または共有するかどうかはお客様が選択します。',
+        ],
+      },
+      {
+        id: 'collection', number: '03', title: 'Privix が収集する情報',
+        callout: '現在のバージョンには、開発者のバックエンド、アカウント、テレメトリ、アナリティクス、第三者のデータ収集 SDK はありません。',
+        body: [
+          '現在の実装において、Privix は個人データを Privix または開発者が管理するサーバーへ送信せず、写真やユーザーデータのリモートデータベースも作成しません。',
+          'Privix は、氏名、メールアドレス、電話番号、正確な位置情報、連絡先、広告識別子、ユーザープロファイルを収集しません。入力した透かしの文字は、デバイス上で画像を作成するためにのみ使用されます。',
+        ],
+      },
+      {
+        id: 'device-storage', number: '04', title: 'デバイスに保存される情報',
+        body: [
+          'Privix は iOS の UserDefaults／AppStorage を使用し、言語設定や使用済みの無料画像書き出し回数など、機能に必要な少量の状態をアプリのローカルストレージに保存します。これらのデータに、写真、画像内容、画像メタデータ、氏名、メールアドレス、電話番号、広告識別情報は含まれません。',
+          '画像処理中、Privix は選択画像のコピー、プレビュー、出力ファイルをメモリおよびアプリ専用の一時ディレクトリに作成します。これらは、お客様が依頼した編集、保存、共有のためにのみ使用され、アナリティクス、広告、AI の学習、クラウド同期には使用されません。一時ファイルは、アプリまたは iOS によって削除されるか、アプリが削除されるまで残る場合があります。',
+          'Privix を削除すると、通常のローカル設定とアプリ専用ストレージを削除できます。iOS がシステムのストレージ管理規則に従って一時ファイルを削除する場合もあります。',
+        ],
+      },
+      {
+        id: 'permissions', number: '05', title: '写真ライブラリへのアクセス',
+        body: [
+          '画像の選択には Apple のシステム写真ピッカーを使用し、写真ライブラリ全体への権限が必要になる場面を減らしています。お客様が「写真に保存」を選択した場合にのみ、Privix は写真の追加のみを許可する権限を求め、新しい出力画像を写真ライブラリへ保存します。',
+          '写真へのアクセス権は、iOS の「設定」にある Privix の権限ページからいつでも取り消せます。取り消した後は、再度許可するまで Privix から新しい画像を写真へ保存できません。デバイス内編集やシステムの共有機能は引き続き利用できる場合があります。',
+        ],
+      },
+      {
+        id: 'purchases', number: '06', title: '購入と Apple StoreKit',
+        body: [
+          'Privix は一度の購入による永久アンロックを提供し、Apple StoreKit 2 を使用して製品情報の取得、購入の完了、利用権の確認、購入の復元を行います。これらの機能にはネットワーク接続が必要となる場合があります。',
+          '支払いは Apple の App Store システムによって処理されます。Privix は、カード番号、CVV、Apple ID のパスワード、銀行口座情報を求めたり取得したりしません。機能がアンロックされているかを判断するため、Privix は Apple がデバイス上で提供する利用権の状態を読み取ります。',
+          'App Store の購入情報および取引情報に対する Apple の取扱いには、Apple 独自のプライバシー文書が適用されます。',
+        ],
+        link: ['Apple の「App Storeとプライバシー」を見る', 'https://www.apple.com/legal/privacy/data/ja/app-store/'],
+      },
+      {
+        id: 'analytics', number: '07', title: 'アナリティクス、広告、トラッキング',
+        body: [
+          '現在のバージョンは、アナリティクス、クラッシュレポート、広告、トラッキングの SDK を使用していません。広告を表示せず、App Tracking Transparency の許可も求めません。',
+          'Privix はアプリやウェブサイトを横断してお客様を追跡せず、IDFA を使用しません。写真や利用状況から広告プロファイルを作成したり、個人データを販売したりすることもありません。Privix はお客様の写真を AI モデルの学習に使用しません。',
+        ],
+      },
+      {
+        id: 'sharing', number: '08', title: '共有と第三者サービス',
+        body: [
+          'iOS の共有シートを使って、出力画像を AirDrop、メッセージ、Mail、Files、LINE、WhatsApp、その他のアプリへ送信すると、選択した送信先がその画像を受け取ります。共有はお客様の操作によって開始され、Privix は受信先サービスによる情報の取扱いを管理しません。',
+          '第三者のアプリやサービスへ共有した情報には、それぞれのプライバシーポリシーと利用条件が適用されます。Privix は現在、Apple 以外の第三者 SDK を組み込んでいません。',
+        ],
+      },
+      {
+        id: 'retention', number: '09', title: '保存期間、削除、お客様の選択',
+        body: [
+          'Privix には開発者が管理するアカウントやバックエンドデータベースがないため、Privix のサーバー上に保存または削除の対象となる写真、アカウント、リモートの個人プロファイルはありません。',
+          'ローカル設定と無料書き出し回数はデバイス上に保存されます。画像処理用の一時ファイルはアプリ専用ストレージにあり、アプリまたは iOS によって管理されます。書き出した写真の削除、写真への権限の取り消し、アプリとローカルデータの削除はお客様自身で行えます。',
+          'Apple が保存する購入記録と App Store の記録は Apple が管理します。Privix のデータ取扱いに関する質問は、本ページの連絡先へお問い合わせください。Apple アカウントまたは取引記録に関する依頼は Apple へ直接お問い合わせください。',
+        ],
+      },
+      {
+        id: 'children', number: '10', title: '子どものプライバシー',
+        body: [
+          'Privix は、子どものプロファイル作成、交流、ターゲティング広告を目的とするサービスではなく、子どものアカウント情報や連絡先情報を意図的に収集しません。アカウントシステムがないため、年齢の入力も求めません。',
+          '子どもが連絡手段を通じて個人情報を送信したと思われる場合は、開発者が管理できる範囲で対応できるようお知らせください。',
+        ],
+      },
+      {
+        id: 'security', number: '11', title: 'セキュリティ',
+        body: [
+          'Privix は、デバイス内画像処理、最小限の権限、限定された外部依存によってデータの露出を減らします。ただし、いかなるデバイス、ソフトウェア、通信手段も完全な安全性を保証することはできません。',
+          '保存または共有する前に、モザイク、透かし、圧縮の結果がお客様の目的に合っているか確認してください。共有後は、受信先サービスまたは受信者が画像のコピーを保持する場合があります。',
+        ],
+      },
+      {
+        id: 'website', number: '12', title: '本プライバシーポリシーサイト',
+        body: [
+          '本サイトは、アナリティクス、広告、トラッキングピクセル、ログイン、不要な Cookie を使用しません。',
+          'サイトの配信、安全性の維持、不正利用の防止のため、ホスティングまたはコンテンツ配信事業者が IP アドレス、リクエスト時刻、閲覧ページ、ブラウザの User-Agent などの基本的な技術情報を処理し、運用およびセキュリティ方針に従って一定期間保持する場合があります。Privix はこれらの情報を広告プロファイルの作成に使用しません。',
+        ],
+      },
+      {
+        id: 'changes', number: '13', title: '本ポリシーの変更',
+        body: [
+          'Privix の機能またはデータ取扱いが変わった場合、本ポリシーを更新し、このページの発効日を改定することがあります。重要な変更は、合理的な範囲でアプリ、ウェブサイト、App Store の情報を通じてお知らせします。',
+          '将来、アナリティクス、第三者 SDK、リモートサービス、新たなデータ利用を追加する場合は、該当バージョンの公開前に本ポリシーと App Store Connect のプライバシー情報を更新します。',
+        ],
+      },
+      {
+        id: 'contact', number: '14', title: 'お問い合わせ',
+        body: ['本ポリシー、Privix のプライバシー設計、お客様の選択についてご質問がある場合は、こちらへお問い合わせください。'],
+        contact: 'fxstudio73@gmail.com',
+        contactHours: '受付時間：月曜日〜金曜日 9:00〜18:00',
+      },
+    ],
+    footerLine: 'Collect less. Upload less. Ask for less.',
+    footerText: 'Privix · プライバシー重視のローカル画像ツール',
+  },
+  ko: {
+    policy: '개인정보처리방침',
+    languageLabel: '언어 변경',
+    themeLabel: '화면 모드 변경',
+    eyebrow: 'PRIVACY, BY DESIGN',
+    headline: '사진은 당신의 iPhone에만 머뭅니다.',
+    lead: 'Privix는 기기에서 직접 이미지를 편집합니다. 워터마크, 모자이크, 압축을 위해 사진을 Privix 서버에 업로드할 필요가 없습니다.',
+    summary: [
+      ['기기 내 처리', '사진 편집과 내보내기는 기기에서 이루어집니다.'],
+      ['계정 불필요', '이름, 이메일, 전화번호 또는 로그인 정보가 필요하지 않습니다.'],
+      ['추적 없음', '분석, 광고 SDK 또는 앱 간 추적을 사용하지 않습니다.'],
+    ],
+    reviewed: '본 방침은 Privix iOS 1.0에 적용됩니다',
+    effective: '시행일',
+    effectiveValue: '2026년 8월 27일',
+    contents: '페이지 목차',
+    sections: [
+      {
+        id: 'introduction', number: '01', title: '적용 범위',
+        body: [
+          '본 개인정보처리방침은 Privix iOS 앱(이하 “Privix”)과 이 개인정보처리방침 웹사이트가 정보를 처리하는 방식을 설명합니다. Privix는 워터마크, 모자이크, 이미지 압축 기능을 제공하는 개인정보 보호 중심의 로컬 이미지 도구입니다.',
+          'Privix는 데이터 노출을 최소화하도록 설계되었습니다. 사용자 계정이나 이미지 처리 서버를 만들지 않으며, 기능과 관련 없는 권한을 요청하지 않습니다.',
+        ],
+      },
+      {
+        id: 'photos', number: '02', title: '사진 및 이미지 처리',
+        callout: '사용자가 선택한 사진은 기기에서 처리되며, 편집을 위해 Privix 서버에 업로드되지 않습니다.',
+        body: [
+          '사용자는 Apple이 제공하는 PhotosPicker를 통해 직접 이미지를 선택합니다. Privix는 사용자가 선택한 항목만 전달받으며 사진 보관함 전체를 스캔하거나 분석하지 않습니다.',
+          '이미지 불러오기, 미리보기, 워터마크, 모자이크, 압축, 렌더링 및 JPEG 내보내기는 Apple의 기본 프레임워크를 사용해 iPhone에서 처리됩니다. Privix는 사진, 이미지 픽셀, 워터마크 문구, 파일 이름, EXIF／GPS 메타데이터, 얼굴 또는 이미지 속 텍스트를 개발자가 관리하는 서버로 전송하지 않습니다.',
+          'Privix는 기본적으로 원본 사진을 덮어쓰지 않습니다. 편집이 완료되면 새 출력 파일을 만들며, 저장하거나 공유할지는 사용자가 결정합니다.',
+        ],
+      },
+      {
+        id: 'collection', number: '03', title: 'Privix가 수집하는 정보',
+        callout: '현재 버전에는 개발자 백엔드, 계정, 원격 측정, 분석 또는 제3자 데이터 수집 SDK가 없습니다.',
+        body: [
+          '현재 구현을 기준으로 Privix는 개인 데이터를 Privix 또는 개발자가 관리하는 서버로 전송하지 않으며, 원격 사진 데이터베이스나 사용자 데이터베이스를 만들지 않습니다.',
+          'Privix는 이름, 이메일 주소, 전화번호, 정확한 위치, 연락처, 광고 식별자 또는 사용자 프로필을 수집하지 않습니다. 사용자가 입력한 워터마크 문구는 기기에서 이미지를 만드는 데에만 사용됩니다.',
+        ],
+      },
+      {
+        id: 'device-storage', number: '04', title: '기기에 저장되는 정보',
+        body: [
+          'Privix는 iOS의 UserDefaults／AppStorage를 사용하여 언어 설정과 사용한 무료 이미지 내보내기 횟수 등 소량의 기능 상태를 앱의 로컬 저장소에 보관합니다. 이 데이터에는 사진, 이미지 내용, 이미지 메타데이터, 이름, 이메일 주소, 전화번호 또는 광고 식별 정보가 포함되지 않습니다.',
+          '이미지를 처리하는 동안 Privix는 선택한 이미지의 사본, 미리보기 및 출력 파일을 메모리와 앱의 비공개 임시 디렉터리에 생성합니다. 이러한 파일은 사용자가 요청한 편집, 저장 또는 공유 절차에만 사용되며 분석, 광고, AI 학습 또는 클라우드 동기화에 사용되지 않습니다. 임시 파일은 앱이나 iOS가 삭제할 때까지 또는 앱이 제거될 때까지 남아 있을 수 있습니다.',
+          'Privix를 삭제하면 일반 로컬 설정과 앱의 비공개 저장 내용을 제거할 수 있습니다. iOS도 시스템 저장소 관리 규칙에 따라 임시 파일을 삭제할 수 있습니다.',
+        ],
+      },
+      {
+        id: 'permissions', number: '05', title: '사진 보관함 접근',
+        body: [
+          '이미지 선택에는 Apple의 시스템 사진 선택기를 사용하여 전체 사진 보관함 권한의 필요성을 줄입니다. 사용자가 “사진에 저장”을 선택한 경우에만 Privix가 사진 추가 전용 권한을 요청하고 새 출력 이미지를 사진 보관함에 저장합니다.',
+          'iOS 설정의 Privix 권한 페이지에서 언제든지 사진 접근 권한을 철회할 수 있습니다. 철회 후에는 다시 허용하기 전까지 Privix가 사진 보관함에 새 이미지를 저장할 수 없습니다. 기기 내 편집과 시스템 공유 기능은 계속 사용할 수 있는 경우가 있습니다.',
+        ],
+      },
+      {
+        id: 'purchases', number: '06', title: '구매 및 Apple StoreKit',
+        body: [
+          'Privix는 일회성 평생 잠금 해제를 제공하며 Apple StoreKit 2를 사용해 상품 정보 불러오기, 구매 완료, 이용 권한 확인 및 구매 복원을 처리합니다. 이 기능에는 네트워크 연결이 필요할 수 있습니다.',
+          '결제는 Apple의 App Store 시스템에서 처리됩니다. Privix는 카드 번호, CVV, Apple ID 암호 또는 은행 계좌 정보를 요구하거나 받지 않습니다. Privix는 기능 잠금 해제 여부를 판단하기 위해 Apple이 기기에서 제공하는 이용 권한 상태를 확인합니다.',
+          'App Store 구매 및 거래 정보에 대한 Apple의 처리는 Apple의 자체 개인정보 보호 문서가 적용됩니다.',
+        ],
+        link: ['Apple의 App Store 및 개인정보 보호 안내 보기', 'https://www.apple.com/legal/privacy/data/ko/app-store/'],
+      },
+      {
+        id: 'analytics', number: '07', title: '분석, 광고 및 추적',
+        body: [
+          '현재 버전은 분석, 충돌 보고, 광고 또는 추적 SDK를 사용하지 않습니다. 광고를 표시하지 않으며 App Tracking Transparency 권한도 요청하지 않습니다.',
+          'Privix는 앱이나 웹사이트 간에 사용자를 추적하지 않고 IDFA를 사용하지 않습니다. 사진이나 사용 활동으로 광고 프로필을 만들거나 개인 데이터를 판매하지 않으며, 사용자의 사진을 AI 모델 학습에 사용하지 않습니다.',
+        ],
+      },
+      {
+        id: 'sharing', number: '08', title: '공유 및 제3자 서비스',
+        body: [
+          'iOS 공유 시트를 사용하여 출력 이미지를 AirDrop, 메시지, Mail, Files, LINE, WhatsApp 또는 다른 앱으로 보내면 사용자가 선택한 대상이 해당 이미지를 받습니다. 공유는 사용자가 직접 시작하며, Privix는 수신 서비스의 정보 처리 방식을 통제하지 않습니다.',
+          '제3자 앱이나 서비스에 공유한 정보에는 해당 서비스의 개인정보처리방침과 약관이 적용됩니다. Privix는 현재 Apple 이외의 제3자 SDK를 통합하지 않습니다.',
+        ],
+      },
+      {
+        id: 'retention', number: '09', title: '보관, 삭제 및 선택권',
+        body: [
+          'Privix에는 개발자가 관리하는 계정이나 백엔드 데이터베이스가 없으므로 Privix 서버에서 보관하거나 삭제할 사진, 계정 또는 원격 개인 프로필이 없습니다.',
+          '로컬 설정과 무료 내보내기 횟수는 사용자의 기기에 저장됩니다. 이미지 처리 임시 파일은 앱의 비공개 저장소에 보관되며 앱 또는 iOS가 관리합니다. 사용자는 내보낸 사진을 삭제하거나 사진 권한을 철회하거나 앱과 로컬 데이터를 제거할 수 있습니다.',
+          'Apple이 보관하는 구매 및 App Store 기록은 Apple이 관리합니다. Privix의 데이터 처리에 관한 질문은 이 페이지의 연락처로 문의해 주세요. Apple 계정이나 거래 기록 관련 요청은 Apple에 직접 문의해야 합니다.',
+        ],
+      },
+      {
+        id: 'children', number: '10', title: '아동 개인정보 보호',
+        body: [
+          'Privix는 아동 프로필, 소셜 활동 또는 맞춤형 광고를 위한 서비스가 아니며, 아동의 계정 또는 연락처 정보를 고의로 수집하지 않습니다. 계정 시스템이 없으므로 사용자에게 나이를 요구하지 않습니다.',
+          '아동이 문의 경로를 통해 개인 정보를 제공했다고 생각되면 개발자가 통제할 수 있는 범위에서 처리할 수 있도록 알려 주세요.',
+        ],
+      },
+      {
+        id: 'security', number: '11', title: '보안',
+        body: [
+          'Privix는 기기 내 이미지 처리, 최소 권한 및 제한된 외부 의존성을 통해 데이터 노출을 줄입니다. 그러나 어떠한 기기, 소프트웨어 또는 전송 방식도 완전한 보안을 보장할 수는 없습니다.',
+          '저장하거나 공유하기 전에 모자이크, 워터마크 및 압축 결과가 목적에 맞는지 확인해 주세요. 공유 후에는 이미지를 받은 서비스나 수신자가 사본을 보관할 수 있습니다.',
+        ],
+      },
+      {
+        id: 'website', number: '12', title: '본 개인정보처리방침 웹사이트',
+        body: [
+          '이 웹사이트는 분석, 광고, 추적 픽셀, 로그인 또는 불필요한 쿠키를 사용하지 않습니다.',
+          '사이트 제공, 보안 유지 및 악용 방지를 위해 호스팅 또는 콘텐츠 전송 서비스 제공자가 IP 주소, 요청 시간, 요청 페이지, 브라우저 User-Agent와 같은 기본 기술 정보를 처리하고 운영 및 보안 정책에 따라 제한된 기간 보관할 수 있습니다. Privix는 이 정보를 광고 프로필 작성에 사용하지 않습니다.',
+        ],
+      },
+      {
+        id: 'changes', number: '13', title: '방침 변경',
+        body: [
+          'Privix의 기능이나 데이터 처리 방식이 변경되면 본 방침을 업데이트하고 이 페이지의 시행일을 수정할 수 있습니다. 중대한 변경은 합리적인 경우 앱, 웹사이트 또는 App Store 정보를 통해 안내합니다.',
+          '향후 분석, 제3자 SDK, 원격 서비스 또는 새로운 데이터 사용 목적이 추가되면 해당 버전 출시 전에 본 방침과 App Store Connect의 앱 개인정보 보호 정보를 업데이트합니다.',
+        ],
+      },
+      {
+        id: 'contact', number: '14', title: '문의',
+        body: ['본 방침, Privix의 개인정보 보호 설계 또는 사용자의 선택에 대해 궁금한 점이 있으면 아래로 문의해 주세요.'],
+        contact: 'fxstudio73@gmail.com',
+        contactHours: '운영 시간: 월요일–금요일 9:00–18:00',
+      },
+    ],
+    footerLine: 'Collect less. Upload less. Ask for less.',
+    footerText: 'Privix · 개인정보 보호 중심의 로컬 이미지 도구',
+  },
+  en: {
+    policy: 'Privacy Policy',
+    languageLabel: 'Change language',
+    themeLabel: 'Change appearance',
+    eyebrow: 'PRIVACY, BY DESIGN',
+    headline: 'Your photos stay on your iPhone.',
+    lead: 'Privix edits images directly on your device. Watermarking, mosaic, and compression do not require uploading your photos to Privix servers.',
+    summary: [
+      ['On-device', 'Photo editing and export happen on your device.'],
+      ['No account', 'No name, email, phone number, or sign-in is required.'],
+      ['No tracking', 'No analytics, advertising SDKs, or cross-app tracking.'],
+    ],
+    reviewed: 'This policy applies to Privix iOS 1.0',
+    effective: 'Effective date',
+    effectiveValue: 'August 27, 2026',
+    contents: 'On this page',
+    sections: [
+      {
+        id: 'introduction', number: '01', title: 'Scope',
+        body: [
+          'This Privacy Policy explains how the Privix iOS app (“Privix”) and this privacy policy website handle information. Privix is a privacy-first local image utility for watermarking, mosaic editing, and image compression.',
+          'Privix is designed to minimize data exposure: it does not create user accounts, operate an image-processing server, or ask for permissions unrelated to its features.',
+        ],
+      },
+      {
+        id: 'photos', number: '02', title: 'Photos and image processing',
+        callout: 'Photos you select are processed on your device. They are not uploaded to Privix servers for editing.',
+        body: [
+          'You choose images using Apple’s PhotosPicker. Privix receives only the items you select and does not scan or analyze your entire photo library.',
+          'Image loading, preview, watermarking, mosaic effects, compression, rendering, and JPEG export use Apple frameworks and run on your iPhone. Privix does not transmit your photos, image pixels, watermark text, file names, EXIF/GPS metadata, faces, or text within images to developer-controlled servers.',
+          'Privix does not overwrite your original photo by default. It creates a new output file and lets you decide whether to save or share it.',
+        ],
+      },
+      {
+        id: 'collection', number: '03', title: 'Information Privix collects',
+        callout: 'The current version has no developer backend, account system, telemetry, analytics, or third-party data-collection SDK.',
+        body: [
+          'Based on the current implementation, Privix does not send personal data to Privix or developer-controlled servers, and it does not create a remote photo or user database.',
+          'Privix does not collect your name, email address, phone number, precise location, contacts, advertising identifier, or user profile. Watermark text you enter is used only to create your image on your device.',
+        ],
+      },
+      {
+        id: 'device-storage', number: '04', title: 'Information stored on your device',
+        body: [
+          'Privix uses iOS UserDefaults/AppStorage to keep a small amount of functional state in the app’s local storage, including language preferences and the number of free image exports already used. This data does not include photos, image content, image metadata, names, email addresses, phone numbers, or advertising identifiers.',
+          'While processing an image, Privix creates selected-image copies, previews, and output files in memory and the app’s private temporary directory. These files support the editing, saving, or sharing workflow you requested. They are not used for analytics, advertising, AI training, or cloud sync. Temporary files may remain until the app or iOS clears them, or until the app is removed.',
+          'You can delete Privix to remove its ordinary local settings and app-private storage. iOS may also clear temporary files under its own storage-management rules.',
+        ],
+      },
+      {
+        id: 'permissions', number: '05', title: 'Photo library access',
+        body: [
+          'Image selection uses Apple’s system photo picker, reducing the need for full photo-library permission. Only when you choose “Save to Photos” does Privix request add-only access and write a new output image to your photo library.',
+          'You can revoke photo access at any time in the Privix permissions page in iOS Settings. After revocation, Privix cannot save new images to Photos unless you grant permission again; local editing and system sharing may remain available.',
+        ],
+      },
+      {
+        id: 'purchases', number: '06', title: 'Purchases and Apple StoreKit',
+        body: [
+          'Privix offers a one-time lifetime unlock and uses Apple StoreKit 2 to load product information, complete purchases, verify entitlements, and restore purchases. These features may require a network connection.',
+          'Payment is processed by Apple’s App Store system. Privix does not ask for or receive your payment-card number, CVV, Apple ID password, or bank details. Privix reads the entitlement state provided by Apple on your device to determine whether features are unlocked.',
+          'Apple’s handling of App Store purchase and transaction information is governed by Apple’s own privacy documentation.',
+        ],
+        link: ['Read Apple’s App Store & Privacy notice', 'https://www.apple.com/legal/privacy/data/en/app-store/'],
+      },
+      {
+        id: 'analytics', number: '07', title: 'Analytics, advertising, and tracking',
+        body: [
+          'The current version does not use analytics, crash-reporting, advertising, or tracking SDKs. It shows no ads and does not request App Tracking Transparency permission.',
+          'Privix does not track you across apps or websites, use IDFA, build advertising profiles from your photos or activity, or sell personal data. Privix does not use your photos to train AI models.',
+        ],
+      },
+      {
+        id: 'sharing', number: '08', title: 'Sharing and third-party services',
+        body: [
+          'When you use the iOS share sheet to send an output image through AirDrop, Messages, Mail, Files, LINE, WhatsApp, or another app, the destination you choose receives that image. You initiate the share, and Privix does not control how the receiving service handles it.',
+          'Information you share with third-party apps or services is subject to their own privacy policies and terms. Privix currently integrates no non-Apple third-party SDKs.',
+        ],
+      },
+      {
+        id: 'retention', number: '09', title: 'Retention, deletion, and your choices',
+        body: [
+          'Because Privix has no developer-controlled account or backend database, there are no photos, accounts, or remote personal profiles for Privix to retain or delete from its servers.',
+          'Local preferences and the free-export count stay on your device; image-processing temporary files stay in the app’s private storage and are managed by the app or iOS. You can delete exported photos, revoke photo permission, or remove the app and its local data.',
+          'Apple manages purchase and App Store records retained by Apple. Contact the developer using the details on this page for questions about Privix. For Apple-account or transaction-record requests, contact Apple directly.',
+        ],
+      },
+      {
+        id: 'children', number: '10', title: 'Children’s privacy',
+        body: [
+          'Privix is not a service for creating children’s profiles, social interactions, or targeted advertising, and it does not knowingly collect children’s account or contact information. Because Privix has no account system, it does not ask users to provide their age.',
+          'If you believe a child has submitted personal information through a contact channel, notify the developer so it can be addressed where within the developer’s control.',
+        ],
+      },
+      {
+        id: 'security', number: '11', title: 'Security',
+        body: [
+          'Privix reduces data exposure through local image processing, minimal permissions, and limited external dependencies. However, no device, software, or transmission method can be guaranteed to be completely secure.',
+          'Review mosaic, watermark, and compression results before saving or sharing. After a share, the receiving service or recipient may keep a copy of the image.',
+        ],
+      },
+      {
+        id: 'website', number: '12', title: 'This privacy policy website',
+        body: [
+          'This website does not use analytics, advertising, tracking pixels, sign-in, or non-essential cookies.',
+          'To deliver the site, maintain security, and prevent abuse, its hosting or content-delivery providers may process basic technical information such as IP address, request time, requested page, and browser user agent, and may retain it for a limited period under their operational and security policies. Privix does not use this information to create advertising profiles.',
+        ],
+      },
+      {
+        id: 'changes', number: '13', title: 'Changes to this policy',
+        body: [
+          'If Privix features or data practices change, this policy may be updated and the effective date on this page will be revised. Material changes will be communicated through the app, website, or App Store information where reasonable.',
+          'If analytics, third-party SDKs, remote services, or new data uses are added in the future, this policy and the App Store Connect privacy information will be updated before the corresponding version is released.',
+        ],
+      },
+      {
+        id: 'contact', number: '14', title: 'Contact',
+        body: ['For questions about this policy, Privix’s privacy design, or your choices, contact:'],
+        contact: 'fxstudio73@gmail.com',
+        contactHours: 'Hours: Monday–Friday, 9:00–18:00',
+      },
+    ],
+    footerLine: 'Collect less. Upload less. Ask for less.',
+    footerText: 'Privix · Privacy-first local image utility',
+  },
+};
+
+
+
+const languageTags = {
+  zh: 'zh-Hant',
+  zhHans: 'zh-Hans',
+  ja: 'ja',
+  ko: 'ko',
+  en: 'en',
+};
+
+const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (character) => ({
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  "'": '&#39;',
+  '"': '&quot;',
+})[character]);
+
+const app = document.querySelector('#app');
+let language = 'zh';
+let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+function renderSection(section) {
+  const callout = section.callout
+    ? `<p class="callout">${escapeHtml(section.callout)}</p>`
+    : '';
+  const paragraphs = section.body
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join('');
+  const externalLink = section.link
+    ? `<a class="external-link" href="${escapeHtml(section.link[1])}" target="_blank" rel="noopener noreferrer">${escapeHtml(section.link[0])} <span aria-hidden="true">↗</span></a>`
+    : '';
+  const contact = section.contact
+    ? `<div class="contact-card"><a href="mailto:${escapeHtml(section.contact)}">${escapeHtml(section.contact)}</a>${section.contactHours ? `<span>${escapeHtml(section.contactHours)}</span>` : ''}</div>`
+    : '';
+
+  return `
+    <section id="${escapeHtml(section.id)}" class="policy-section">
+      <div class="section-heading"><span>${escapeHtml(section.number)}</span><h2>${escapeHtml(section.title)}</h2></div>
+      ${callout}${paragraphs}${externalLink}${contact}
+    </section>`;
+}
+
+function render() {
+  const content = copy[language];
+  const ui = uiCopy[language];
+
+  document.documentElement.lang = languageTags[language];
+  document.documentElement.dataset.theme = theme;
+  document.title = `${content.policy} · Privix`;
+
+  app.innerHTML = `
+    <header id="top" class="site-header">
+      <a class="brand" href="#top" aria-label="Privix">Privix</a>
+      <nav class="site-nav" aria-label="${escapeHtml(content.policy)}">
+        <a href="#summary">${escapeHtml(ui.overview)}</a>
+        <a href="#policy">${escapeHtml(content.policy)}</a>
+        <a href="#contact">${escapeHtml(ui.contact)}</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="${escapeHtml(content.languageLabel)}">
+          ${languageOptions.map((option) => `
+            <button
+              type="button"
+              data-language="${escapeHtml(option.value)}"
+              class="${language === option.value ? 'active' : ''}"
+              aria-pressed="${language === option.value}"
+              lang="${languageTags[option.value]}"
+            >${escapeHtml(option.label)}</button>`).join('')}
+        </div>
+        <button type="button" class="theme-switch" aria-label="${escapeHtml(content.themeLabel)}" title="${escapeHtml(content.themeLabel)}">
+          <span aria-hidden="true">${theme === 'light' ? '◐' : '◑'}</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="page-wrap">
+      <article class="document-card">
+        <header class="document-heading">
+          <p class="eyebrow">${escapeHtml(content.eyebrow)}</p>
+          <h1>${escapeHtml(content.policy)}</h1>
+          <span class="title-rule" aria-hidden="true"></span>
+          <p class="document-status">${escapeHtml(content.reviewed)}</p>
+          <dl class="policy-meta"><div><dt>${escapeHtml(content.effective)}</dt><dd>${escapeHtml(content.effectiveValue)}</dd></div></dl>
+        </header>
+
+        <section class="hero" aria-labelledby="hero-title">
+          <p class="hero-kicker">${escapeHtml(ui.corePromise)}</p>
+          <h2 id="hero-title">${escapeHtml(content.headline)}</h2>
+          <p class="lead">${escapeHtml(content.lead)}</p>
+          <div class="local-flow" aria-label="${escapeHtml(ui.flowLabel)}">
+            <span>${escapeHtml(ui.choosePhoto)}</span><i aria-hidden="true">→</i>
+            <span>${escapeHtml(ui.editOnIphone)}</span><i aria-hidden="true">→</i>
+            <span>${escapeHtml(ui.saveOrShare)}</span>
+          </div>
+        </section>
+
+        <section id="summary" class="summary-block" aria-label="${escapeHtml(ui.summaryLabel)}">
+          <div class="block-title"><span></span><h2>${escapeHtml(ui.summaryTitle)}</h2></div>
+          <div class="summary-grid">
+            ${content.summary.map(([title, description], index) => `
+              <article><span class="summary-number">0${index + 1}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(description)}</p></article>`).join('')}
+          </div>
+        </section>
+
+        <nav class="table-of-contents" aria-label="${escapeHtml(content.contents)}">
+          <p>${escapeHtml(content.contents)}</p>
+          <div>${content.sections.map((section) => `<a href="#${escapeHtml(section.id)}"><span>${escapeHtml(section.number)}</span>${escapeHtml(section.title)}</a>`).join('')}</div>
+        </nav>
+
+        <div id="policy" class="policy-layout">
+          <article class="policy-article">${content.sections.map(renderSection).join('')}</article>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      <p class="footer-line">${escapeHtml(content.footerLine)}</p>
+      <p>${escapeHtml(content.footerText)}</p>
+      <a href="#top">${escapeHtml(ui.backToTop)}</a>
+    </footer>`;
+
+  document.querySelectorAll('[data-language]').forEach((button) => {
+    button.addEventListener('click', () => {
+      language = button.dataset.language;
+      render();
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    });
+  });
+
+  document.querySelector('.theme-switch').addEventListener('click', () => {
+    theme = theme === 'light' ? 'dark' : 'light';
+    render();
+  });
+}
+
+render();
+
+    </script>
+  </body>
+</html>
